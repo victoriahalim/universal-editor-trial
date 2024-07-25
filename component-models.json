@@ -185,5 +185,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "links",
+        "label": "Links",
+        "multi": false
+      }
+    ]
   }
 ]

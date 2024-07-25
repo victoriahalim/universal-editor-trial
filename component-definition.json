@@ -51,6 +51,18 @@
               }
             }
           }
+        },
+        {
+          "title": "Links",
+          "id": "links",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/links/v1/links",
+                "template": {}
+              }
+            }
+          }
         }
       ]
     },
