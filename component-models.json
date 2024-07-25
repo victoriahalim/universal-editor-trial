@@ -190,18 +190,11 @@
     "id": "embed",
     "fields": [
       {
-        "component": "reference",
+        "component": "text",
         "valueType": "string",
-        "name": "links",
-        "label": "Links",
-        "multi": false
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "name": "href",
+        "value": "",
+        "label": "Link"
       }
     ]
   }
