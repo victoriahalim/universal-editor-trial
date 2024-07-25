@@ -192,9 +192,14 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "href",
-        "value": "",
-        "label": "Link"
+        "name": "videourl",
+        "label": "videourl"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "thumbnail",
+        "label": "thumbnail"
       }
     ]
   },
