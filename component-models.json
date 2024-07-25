@@ -187,7 +187,7 @@
     ]
   },
   {
-    "id": "embed",
+    "id": "tester",
     "fields": [
       {
         "component": "text",
