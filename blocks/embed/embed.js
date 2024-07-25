@@ -49,9 +49,13 @@ const loadScript = (url, callback, type) => {
   };
   
   const loadEmbed = (block, link, autoplay) => {
+    console.log("Loading embed");
     if (block.classList.contains('embed-is-loaded')) {
+      console.log("is loaded");
       return;
     }
+
+    console.log("successful loading");
     const EMBEDS_CONFIG = [
       {
         match: ['youtube', 'youtu.be'],
@@ -68,6 +72,7 @@ const loadScript = (url, callback, type) => {
     ];
     const config = EMBEDS_CONFIG.find((e) => e.match.some((match) => link.includes(match)));
     const url = new URL(link);
+    console.log("looking for config");
     if (config) {
       block.innerHTML = config.embed(url, autoplay);
       block.classList = `block embed embed-${config.match[0]}`;
@@ -79,6 +84,8 @@ const loadScript = (url, callback, type) => {
   };
   
   export default function decorate(block) {
+    console.log("decorating embed");
+    console.log(block);
     const placeholder = block.querySelector('picture');
     const link = block.querySelector('a').href;
     block.textContent = '';
