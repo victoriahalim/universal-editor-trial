@@ -195,6 +195,13 @@
         "name": "links",
         "label": "Links",
         "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
       }
     ]
   }

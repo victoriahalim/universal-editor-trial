@@ -36,11 +36,5 @@
     "components": [
       "card"
     ]
-  },
-  {
-    "id": "embed",
-    "components": [
-      "links"
-    ]
   }
 ]
