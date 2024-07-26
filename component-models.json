@@ -193,8 +193,8 @@
         "component": "text",
         "value": "",
         "valueType": "string",
-        "name": "embed",
-        "label": "Embed"
+        "name": "embedURL",
+        "label": "Embed URL"
       }
     ]
   },
