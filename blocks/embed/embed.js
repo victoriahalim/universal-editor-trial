@@ -48,7 +48,8 @@ const embedTwitter = (url) => {
   loadScript('https://platform.twitter.com/widgets.js');
   return embedHTML;
 };
-  
+
+/* Link is a string of the url the embed is associated with. */
 const loadEmbed = (block, link, autoplay) => {
   console.log("Loading embed");
   if (block.classList.contains('embed-is-loaded')) {
@@ -71,6 +72,7 @@ const loadEmbed = (block, link, autoplay) => {
       embed: embedTwitter,
     },
   ];
+
   const config = EMBEDS_CONFIG.find((e) => e.match.some((match) => link.includes(match)));
   const url = new URL(link);
   console.log("looking for config");
@@ -88,8 +90,9 @@ export default function decorate(block) {
   console.log("decorating embed");
   console.log(block);
   const placeholder = block.querySelector('picture');
-  const link = block.querySelector('a').href;
+  const link = block.querySelector('a').href; // How do I get the link to have an anchor element?
   block.textContent = '';
+
   if (placeholder) {
     const wrapper = document.createElement('div');
     wrapper.className = 'embed-placeholder';

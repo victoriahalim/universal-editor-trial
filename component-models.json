@@ -187,19 +187,14 @@
     ]
   },
   {
-    "id": "tester",
+    "id": "embed",
     "fields": [
       {
         "component": "text",
+        "value": "",
         "valueType": "string",
-        "name": "videourl",
-        "label": "videourl"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "thumbnail",
-        "label": "thumbnail"
+        "name": "videoLink",
+        "label": "Video Link"
       }
     ]
   },
