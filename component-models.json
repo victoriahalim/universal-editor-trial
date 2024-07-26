@@ -199,6 +199,18 @@
     ]
   },
   {
+    "id": "tester",
+    "fields": [
+      {
+        "component": "text",
+        "value": "",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      }
+    ]
+  },
+  {
     "id": "quote",
     "fields": [
        {
