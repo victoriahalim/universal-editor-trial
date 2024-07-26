@@ -10,84 +10,84 @@ const loadScript = (url, callback, type) => {
     return script;
   };
   
-const getDefaultEmbed = (url) => `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+const getDefaulttester = (url) => `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
     <iframe src="${url.href}" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen=""
       scrolling="no" allow="encrypted-media" title="Content from ${url.hostname}" loading="lazy">
     </iframe>
   </div>`;
   
-const embedYoutube = (url, autoplay) => {
+const testerYoutube = (url, autoplay) => {
   const usp = new URLSearchParams(url.search);
   const suffix = autoplay ? '&muted=1&autoplay=1' : '';
   let vid = usp.get('v') ? encodeURIComponent(usp.get('v')) : '';
-  const embed = url.pathname;
+  const tester = url.pathname;
   if (url.origin.includes('youtu.be')) {
     [, vid] = url.pathname.split('/');
   }
-  const embedHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
-      <iframe src="https://www.youtube.com${vid ? `/embed/${vid}?rel=0&v=${vid}${suffix}` : embed}" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
+  const testerHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+      <iframe src="https://www.youtube.com${vid ? `/tester/${vid}?rel=0&v=${vid}${suffix}` : tester}" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope; picture-in-picture" allowfullscreen="" scrolling="no" title="Content from Youtube" loading="lazy"></iframe>
     </div>`;
-  return embedHTML;
+  return testerHTML;
 };
   
-const embedVimeo = (url, autoplay) => {
+const testerVimeo = (url, autoplay) => {
   const [, video] = url.pathname.split('/');
   const suffix = autoplay ? '?muted=1&autoplay=1' : '';
-  const embedHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+  const testerHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
       <iframe src="https://player.vimeo.com/video/${video}${suffix}" 
       style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
       frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  
       title="Content from Vimeo" loading="lazy"></iframe>
     </div>`;
-  return embedHTML;
+  return testerHTML;
 };
   
-const embedTwitter = (url) => {
-  const embedHTML = `<blockquote class="twitter-tweet"><a href="${url.href}"></a></blockquote>`;
+const testerTwitter = (url) => {
+  const testerHTML = `<blockquote class="twitter-tweet"><a href="${url.href}"></a></blockquote>`;
   loadScript('https://platform.twitter.com/widgets.js');
-  return embedHTML;
+  return testerHTML;
 };
 
-/* Link is a string of the url the embed is associated with. */
-const loadEmbed = (block, link, autoplay) => {
-  console.log("Loading embed");
-  if (block.classList.contains('embed-is-loaded')) {
+/* Link is a string of the url the tester is associated with. */
+const loadtester = (block, link, autoplay) => {
+  console.log("Loading tester");
+  if (block.classList.contains('tester-is-loaded')) {
     console.log("is loaded");
     return;
   }
 
   console.log("successful loading");
-  const EMBEDS_CONFIG = [
+  const testerS_CONFIG = [
     {
       match: ['youtube', 'youtu.be'],
-      embed: embedYoutube,
+      tester: testerYoutube,
     },
     {
       match: ['vimeo'],
-      embed: embedVimeo,
+      tester: testerVimeo,
     },
     {
       match: ['twitter'],
-      embed: embedTwitter,
+      tester: testerTwitter,
     },
   ];
 
-  const config = EMBEDS_CONFIG.find((e) => e.match.some((match) => link.includes(match)));
+  const config = testerS_CONFIG.find((e) => e.match.some((match) => link.includes(match)));
   const url = new URL(link);
   console.log("looking for config");
   if (config) {
-    block.innerHTML = config.embed(url, autoplay);
-    block.classList = `block embed embed-${config.match[0]}`;
+    block.innerHTML = config.tester(url, autoplay);
+    block.classList = `block tester tester-${config.match[0]}`;
   } else {
-    block.innerHTML = getDefaultEmbed(url);
-    block.classList = 'block embed';
+    block.innerHTML = getDefaulttester(url);
+    block.classList = 'block tester';
   }
-  block.classList.add('embed-is-loaded');
+  block.classList.add('tester-is-loaded');
 };
   
 export default function decorate(block) {
-  console.log("decorating embed");
+  console.log("decorating tester");
   console.log(block);
   const placeholder = block.querySelector('picture');
   const link = block.querySelector('a').href; // How do I get the link to have an anchor element?
@@ -95,11 +95,11 @@ export default function decorate(block) {
 
   if (placeholder) {
     const wrapper = document.createElement('div');
-    wrapper.className = 'embed-placeholder';
-    wrapper.innerHTML = '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';
+    wrapper.className = 'tester-placeholder';
+    wrapper.innerHTML = '<div class="tester-placeholder-play"><button type="button" title="Play"></button></div>';
     wrapper.prepend(placeholder);
     wrapper.addEventListener('click', () => {
-      loadEmbed(block, link, true);
+      loadtester(block, link, true);
 
     });
     block.append(wrapper);
@@ -107,7 +107,7 @@ export default function decorate(block) {
     const observer = new IntersectionObserver((entries) => {
       if (entries.some((e) => e.isIntersecting)) {
         observer.disconnect();
-        loadEmbed(block, link);
+        loadtester(block, link);
       }
     });
     observer.observe(block);

@@ -187,18 +187,6 @@
     ]
   },
   {
-    "id": "embed",
-    "fields": [
-      {
-        "component": "text",
-        "value": "",
-        "valueType": "string",
-        "name": "videoLink",
-        "label": "Video Link"
-      }
-    ]
-  },
-  {
     "id": "tester",
     "fields": [
       {

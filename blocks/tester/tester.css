@@ -1,33 +1,33 @@
-/* General Embed Styles */
-.embed {
+/* General tester Styles */
+.tester {
   width: 60%;
   padding-left:5%;
   padding-bottom:10%;
   padding-top:3%;
   margin: 32px auto;
-  float: right; /* Add this line to float the embed to the right */
+  float: right; /* Add this line to float the tester to the right */
 }
 
-/* Styles for the Inner Content of Embeds */
-.embed > div {
+/* Styles for the Inner Content of testers */
+.tester > div {
   display: block;
   justify-content: right;
 }
 
-/* Twitter Embed Styles */
-.embed.embed-twitter .twitter-tweet-rendered {
+/* Twitter tester Styles */
+.tester.tester-twitter .twitter-tweet-rendered {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Styles for Embed Placeholders */
-.embed .embed-placeholder {
+/* Styles for tester Placeholders */
+.tester .tester-placeholder {
   width: 100%;
   aspect-ratio: 16 / 9;
   position: relative;
 }
 
-.embed .embed-placeholder > * {
+.tester .tester-placeholder > * {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,14 +35,14 @@
   inset: 0;
 }
 
-.embed .embed-placeholder picture img {
+.tester .tester-placeholder picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 /* Play Button Styles */
-.embed .embed-placeholder-play button {
+.tester .tester-placeholder-play button {
   box-sizing: border-box;
   position: relative;
   display: block;
@@ -53,7 +53,7 @@
   padding: 0; 
 }
 
-.embed .embed-placeholder-play button::before {
+.tester .tester-placeholder-play button::before {
   margin: auto;
   content: "";
   display: block;
@@ -71,7 +71,7 @@
 /* Add a new class for the div above the video */
 
 @media only screen and (max-width: 1300px) {
-  .embed {
+  .tester {
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
