@@ -29,13 +29,20 @@
       "cards",
       "columns",
       "embed",
-      "quote"
+      "quote",
+      "contact-us"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "contact-us",
+    "components": [
+      "columns"
     ]
   }
 ]
