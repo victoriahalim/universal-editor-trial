@@ -216,5 +216,38 @@
          "value": ""
        }
      ]
+  },
+  {
+    "id": "contact",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "contact-icon",
+        "label": "Contact icon",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "field-name",
+        "label": "Field name",
+        "multi": false
+      },
+       {
+         "component": "text",
+         "name": "heading",
+         "value": "Heading",
+         "label": "Heading",
+         "valueType": "string"
+       },
+       {
+        "component": "rich-text",
+        "name": "contact-details",
+        "value": "Lorem ipsum dolor amet",
+        "label": "Contact details",
+        "valueType": "string"
+      }
+     ]
   }
 ]
