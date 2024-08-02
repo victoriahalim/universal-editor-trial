@@ -242,7 +242,7 @@
          "valueType": "string"
        },
        {
-        "component": "rich-text",
+        "component": "richtext",
         "name": "contact-details",
         "value": "Lorem ipsum dolor amet",
         "label": "Contact details",
