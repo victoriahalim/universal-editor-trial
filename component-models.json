@@ -230,22 +230,22 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "field-name",
-        "label": "Field name",
+        "name": "contact-type",
+        "label": "Contact type",
         "multi": false
       },
        {
-         "component": "text",
-         "name": "heading",
+         "component": "richtext",
+         "name": "contact-value",
          "value": "Heading",
-         "label": "Heading",
+         "label": "Contact value",
          "valueType": "string"
        },
        {
         "component": "richtext",
-        "name": "contact-details",
+        "name": "contact-description",
         "value": "Lorem ipsum dolor amet",
-        "label": "Contact details",
+        "label": "Contact description",
         "valueType": "string"
       }
      ]
