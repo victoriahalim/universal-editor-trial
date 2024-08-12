@@ -230,14 +230,15 @@
       {
         "component": "text",
         "valueType": "string",
+        "value": "Email",
         "name": "contact-type",
         "label": "Contact type",
         "multi": false
       },
        {
-         "component": "richtext",
+         "component": "text",
          "name": "contact-value",
-         "value": "Heading",
+         "value": "blabla@deloitte.com.au",
          "label": "Contact value",
          "valueType": "string"
        },
