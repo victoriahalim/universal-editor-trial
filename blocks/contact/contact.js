@@ -1,13 +1,16 @@
-const contactFields = ["contact-icon", "contact-field-name", "contact-heading", "contact-details"];
+import { addClasses } from "../../scripts/util.js";
+
+const contactFields = ["contact-icon", "contact-type", "contact-value", "contact-description"];
 
 export default function decorate(block){
-    console.log(block);
     const allDivs= block.querySelectorAll(':scope > div');
 
     allDivs.forEach((div, index) => {
         div.className = `${contactFields[index]}-wrapper`;
         div.querySelector("div").className = contactFields[index];
     });
-}
 
-// contact icon, field name, heading, contact details
+    const contactType = block.querySelector(".contact-type");
+    addClasses(contactType, "overline");
+    contactType.textContent = contactType.textContent.toUpperCase();
+}
