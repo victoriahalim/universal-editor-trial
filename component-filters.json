@@ -9,7 +9,7 @@
   },
   {
     "id": "column",
-    "components": ["text", "image", "button", "title", "contact"]
+    "components": ["text", "image", "button", "title"]
   },
   {
     "id": "section",
@@ -33,6 +33,6 @@
   },
   {
     "id": "contact-us",
-    "components": ["columns"]
+    "components": ["contact"]
   }
 ]
