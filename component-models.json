@@ -201,21 +201,54 @@
   {
     "id": "quote",
     "fields": [
-       {
-         "component": "text-area",
-         "name": "quote",
-         "value": "",
-         "label": "Quote",
-         "valueType": "string"
-       },
-       {
-         "component": "text-input",
-         "valueType": "string",
-         "name": "author",
-         "label": "Author",
-         "value": ""
-       }
-     ]
+      {
+        "component": "text-area",
+        "name": "quote",
+        "value": "",
+        "label": "Quote",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "author",
+        "label": "Author",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "background-image",
+        "label": "Background image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "subtitle",
+        "label": "Subtitle",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "content-preview",
+        "value": "Lorem ipsum dolor amet",
+        "label": "Content preview",
+        "valueType": "string"
+      }
+    ]
   },
   {
     "id": "contact",
@@ -235,20 +268,20 @@
         "label": "Contact type",
         "multi": false
       },
-       {
-         "component": "text",
-         "name": "contact-value",
-         "value": "blabla@deloitte.com.au",
-         "label": "Contact value",
-         "valueType": "string"
-       },
-       {
+      {
+        "component": "text",
+        "name": "contact-value",
+        "value": "blabla@deloitte.com.au",
+        "label": "Contact value",
+        "valueType": "string"
+      },
+      {
         "component": "richtext",
         "name": "contact-description",
         "value": "Lorem ipsum dolor amet",
         "label": "Contact description",
         "valueType": "string"
       }
-     ]
+    ]
   }
 ]
