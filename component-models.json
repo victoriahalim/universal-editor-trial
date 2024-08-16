@@ -199,6 +199,37 @@
     ]
   },
   {
+    "id": "video",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "value": "",
+        "valueType": "string",
+        "name": "videoURL",
+        "label": "Video URL"
+      }
+    ]
+  },
+  {
+    "id": "search",
+    "fields": [
+      {
+        "component": "text",
+        "value": "",
+        "valueType": "string",
+        "name": "searchURL",
+        "label": "Search URL"
+      }
+    ]
+  },
+  {
     "id": "quote",
     "fields": [
        {
