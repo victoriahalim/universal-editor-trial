@@ -232,21 +232,54 @@
   {
     "id": "quote",
     "fields": [
-       {
-         "component": "text-area",
-         "name": "quote",
-         "value": "",
-         "label": "Quote",
-         "valueType": "string"
-       },
-       {
-         "component": "text-input",
-         "valueType": "string",
-         "name": "author",
-         "label": "Author",
-         "value": ""
-       }
-     ]
+      {
+        "component": "text-area",
+        "name": "quote",
+        "value": "",
+        "label": "Quote",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "author",
+        "label": "Author",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "background-image",
+        "label": "Background image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "subtitle",
+        "label": "Subtitle",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "content-preview",
+        "value": "Lorem ipsum dolor amet",
+        "label": "Content preview",
+        "valueType": "string"
+      }
+    ]
   },
   {
     "id": "contact",
@@ -261,24 +294,25 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "field-name",
-        "label": "Field name",
+        "value": "Email",
+        "name": "contact-type",
+        "label": "Contact type",
         "multi": false
       },
-       {
-         "component": "text",
-         "name": "heading",
-         "value": "Heading",
-         "label": "Heading",
-         "valueType": "string"
-       },
-       {
+      {
+        "component": "text",
+        "name": "contact-value",
+        "value": "blabla@deloitte.com.au",
+        "label": "Contact value",
+        "valueType": "string"
+      },
+      {
         "component": "richtext",
-        "name": "contact-details",
+        "name": "contact-description",
         "value": "Lorem ipsum dolor amet",
-        "label": "Contact details",
+        "label": "Contact description",
         "valueType": "string"
       }
-     ]
+    ]
   }
 ]

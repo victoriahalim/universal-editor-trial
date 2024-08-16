@@ -1,0 +1,32 @@
+/* Wrapper behavior */
+
+.contact-us {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 900px) {
+  .contact-us {
+    flex-direction: column;
+  }
+}
+
+/* Contact behavior */
+
+.contact-icon {
+  display: flex;
+}
+
+.contact-icon picture {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.contact-type {
+  color: var(--bs-btn-bg);
+}
+
+.contact-value {
+  margin: 10px 0;
+}
