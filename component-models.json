@@ -282,6 +282,25 @@
     ]
   },
   {
+    "id": "childlisting",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "link",
+        "value": "https://www.google.com/",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "display-text",
+        "value": "Google",
+        "label": "Display text"
+      }
+    ]
+  },
+  {
     "id": "contact",
     "fields": [
       {

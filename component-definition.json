@@ -209,6 +209,21 @@
           }
         },
         {
+          "title": "Childlisting",
+          "id": "childlisting",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Childlisting",
+                  "model": "childlisting"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Contact Us",
           "id": "contact-us",
           "plugins": {
