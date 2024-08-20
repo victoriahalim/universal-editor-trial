@@ -1,4 +1,4 @@
-export default function decorate(block) {
+/*export default function decorate(block) {
   const allDivs = block.querySelectorAll("div");
 
   allDivs.forEach(function (div) {
@@ -14,15 +14,15 @@ export default function decorate(block) {
   anchors.forEach(function (anchor) {
     anchor.classList.remove("button");
   });
+}*/
 
-  /*
+/*
   allDivs.forEach(function(div){
       div.classList.remove('button-container');
   });*/
 
-  /*
+/*
   const linksDiv = block.querySelector(':scope>div>div>div>div>');
   const links = document.createElement("p")
   links.classList.add("linksstyling");
   linksDiv.replacewith(links);*/
-}
