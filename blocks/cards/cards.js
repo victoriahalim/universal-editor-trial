@@ -2,7 +2,6 @@ import { createOptimizedPicture } from "../../scripts/aem.js";
 import { moveInstrumentation } from "../../scripts/scripts.js";
 
 export default function decorate(block) {
-  console.log(block);
   const ul = document.createElement("ul");
   [...block.children].forEach((row) => {
     const li = document.createElement("li");
