@@ -8,7 +8,6 @@ const contactFields = [
 ];
 
 export default function decorate(block) {
-  console.log(block);
   [...block.children].forEach((contactWrapper) => {
     [...contactWrapper.children].forEach((div, index) => {
       div.className = contactFields[index];
