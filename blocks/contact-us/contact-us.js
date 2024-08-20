@@ -1,4 +1,4 @@
-import { addClasses } from "../../scripts/util.js";
+import { addClasses, replaceTextLevel } from "../../scripts/util.js";
 
 const contactFields = [
   "contact-icon",
@@ -8,6 +8,7 @@ const contactFields = [
 ];
 
 export default function decorate(block) {
+  console.log(block);
   [...block.children].forEach((contactWrapper) => {
     [...contactWrapper.children].forEach((div, index) => {
       div.className = contactFields[index];
@@ -21,5 +22,10 @@ export default function decorate(block) {
   contactTypes.forEach((instance) => {
     addClasses(instance, "overline");
     instance.textContent = instance.textContent.toUpperCase();
+  });
+
+  const contactValues = block.querySelectorAll(".contact-value");
+  contactValues.forEach((instance) => {
+    replaceTextLevel(instance, "p", "h4");
   });
 }

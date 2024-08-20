@@ -1,12 +1,15 @@
 /* Wrapper behavior */
 
 .contact-us {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  gap: 100px;
 }
 
 @media screen and (max-width: 900px) {
   .contact-us {
+    display: flex;
     flex-direction: column;
   }
 }
