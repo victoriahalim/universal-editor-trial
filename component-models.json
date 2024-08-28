@@ -245,6 +245,23 @@
         "name": "author",
         "label": "Author",
         "value": ""
+      },
+      {
+        "component": "select",
+        "name": "indicatorType",
+        "value": "Inner",
+        "label": "Slide Indicator Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "inner",
+            "value": "Inner"
+          },
+          {
+            "name": "outer",
+            "value": "Outer"
+          }
+        ]
       }
     ]
   },
