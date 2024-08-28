@@ -1,4 +1,4 @@
-import { replaceTextLevel } from "../../scripts/util.js";
+/*import { replaceTextLevel } from "../../scripts/util.js";
 
 export default function decorate(block) {
   const blockData = block.querySelectorAll(":scope > div");
@@ -9,4 +9,4 @@ export default function decorate(block) {
 
   block.removeChild(blockData[1]);
   replaceTextLevel(block, "p", "h6");
-}
+}*/
