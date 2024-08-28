@@ -21,7 +21,6 @@
       "hero",
       "cards",
       "carousel",
-      "childlisting",
       "contact-us",
       "columns",
       "embed",
@@ -37,6 +36,10 @@
   {
     "id": "carousel",
     "components": ["carousel-item"]
+  },
+  {
+    "id": "childlisting",
+    "components": ["childlisting-item"]
   },
   {
     "id": "contact-us",
