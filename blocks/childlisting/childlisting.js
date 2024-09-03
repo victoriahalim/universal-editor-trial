@@ -1,12 +1,14 @@
-/*import { replaceTextLevel } from "../../scripts/util.js";
+import { replaceTextLevel } from "../../scripts/util.js";
 
 export default function decorate(block) {
-  const blockData = block.querySelectorAll(":scope > div");
-  const childListing = blockData[0];
+  [...block.children].forEach((data) => {
+    const childlisting = [...data.children][0];
+    const listingText = [...data.children][1];
 
-  const displayText = blockData[1].textContent;
-  childListing.querySelector("a").textContent = displayText;
+    childlisting.querySelector("a").textContent = listingText.textContent;
+    replaceTextLevel(block, "p", "h6");
+    childlisting.className = "childlisting-wrapper";
 
-  block.removeChild(blockData[1]);
-  replaceTextLevel(block, "p", "h6");
-}*/
+    data.removeChild(listingText);
+  });
+}
