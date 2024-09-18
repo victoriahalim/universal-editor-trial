@@ -330,7 +330,8 @@
         "valueType": "string",
         "name": "contact-icon",
         "label": "Contact icon",
-        "multi": false
+        "multi": false,
+        "required": true
       },
       {
         "component": "text",
@@ -338,21 +339,23 @@
         "value": "Email",
         "name": "contact-type",
         "label": "Contact type",
-        "multi": false
+        "required": true
       },
       {
         "component": "text",
         "name": "contact-value",
         "value": "blabla@deloitte.com.au",
         "label": "Contact value",
-        "valueType": "string"
+        "valueType": "string",
+        "required": true
       },
       {
         "component": "richtext",
         "name": "contact-description",
         "value": "Lorem ipsum dolor amet",
         "label": "Contact description",
-        "valueType": "string"
+        "valueType": "string",
+        "required": true
       }
     ]
   }
