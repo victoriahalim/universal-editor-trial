@@ -33,9 +33,11 @@ function createSlide(
       slideContent.append(column);
     }
 
+    console.log("we're here");
     // Add slide indicator nav within the carousel
     if (colIdx === 1 && slideIndicatorsNav !== undefined) {
       column.append(slideIndicatorsNav);
+      console.log("appended nav");
     }
 
     if (colIdx === 0) {
@@ -54,6 +56,8 @@ function createSlide(
 
   return slide;
 }
+
+// TODO: Has inner indicators is sposed to be true
 
 export default function createAllSlides(
   carouselId,
