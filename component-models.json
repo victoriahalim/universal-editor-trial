@@ -358,5 +358,24 @@
         "required": true
       }
     ]
+  },
+  {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "accordion",
+        "value": "",
+        "label": "Accordion outer text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "author",
+        "label": "Accordion inner text",
+        "value": ""
+      }
+    ]
   }
 ]
